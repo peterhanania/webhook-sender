@@ -298,6 +298,11 @@ $(document).ready(function () {
   const btntheme = document.getElementById('theme')
 
   const currentTheme = localStorage.getItem('theme')
+  if(!currentTheme) {
+     $('#theme').prop('checked', true)
+     document.body.classList.toggle('dark')
+     localStorage.setItem('theme', 'dark')
+  } else {
   if (currentTheme == 'dark') {
     $('#theme').prop('checked', false)
     document.body.classList.toggle('light')
@@ -305,11 +310,11 @@ $(document).ready(function () {
     $('#theme').prop('checked', true)
     document.body.classList.toggle('dark')
   }
+  }
 
   btntheme.addEventListener('click', function () {
     document.body.classList.toggle('light')
     var theme = document.body.classList.contains('light') ? 'dark' : 'light'
-
     localStorage.setItem('theme', theme)
   })
 })
