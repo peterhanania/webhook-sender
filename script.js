@@ -14,6 +14,7 @@ function send () {
     new Noty({
       type: 'error',
       text: `Provide a valid webhook link`,
+      timeout: 3000,
       animation: {
         open: function (promise) {
           var n = this
@@ -292,7 +293,23 @@ function send () {
     })
 }
 
-
 $(document).ready(function () {
   Swal.fire('Notice', 'This webhook sender was just made for fun.<br> Do not abuse it / use it for harm.<br>I am not responsible for any of your actions,', 'info')
+  const btntheme = document.getElementById('theme')
+
+  const currentTheme = localStorage.getItem('theme')
+  if (currentTheme == 'dark') {
+    $('#theme').prop('checked', false)
+    document.body.classList.toggle('light')
+  } else if (currentTheme == 'light') {
+    $('#theme').prop('checked', true)
+    document.body.classList.toggle('dark')
+  }
+
+  btntheme.addEventListener('click', function () {
+    document.body.classList.toggle('light')
+    var theme = document.body.classList.contains('light') ? 'dark' : 'light'
+
+    localStorage.setItem('theme', theme)
+  })
 })
