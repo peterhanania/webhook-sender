@@ -2,8 +2,9 @@ body {
   --background: #0f1e2d;
   --input: #292b2f;
   --white: #fff;
-  --white2: #fff;
+  --white2: #0f1e2d;
   --grey: #ccd5e0;
+  --tgl: #fff
 }
 
 body.light {
@@ -12,6 +13,7 @@ body.light {
   --white: #0f1e2d;
   --white2: #fff;
   --grey: #192e44;
+  --tgl: #fff
 }
 
 body {
@@ -320,14 +322,14 @@ input[type='checkbox'] {
   transition: ease-in 0.5s;
 }
 input[type='checkbox']:checked ~ .check {
-  background: var(--input);
+  background: var(--tgl);
 }
 .check:before {
   content: '';
   position: absolute;
   top: 2px;
   left: 2px;
-  background: var(--input);
+  background: var(--tgl);
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -338,7 +340,7 @@ input[type='checkbox']:checked ~ .check {
   position: absolute;
   top: 2px;
   right: 2px;
-  background: var(--white);
+  background: #0f1e2d;
   width: 16px;
   height: 16px;
   border-radius: 50%;
