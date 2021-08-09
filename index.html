@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="canonical"
+      href="https://peterhanania.github.io/webhook-sender"
+    />
+    <meta name="theme-color" content="#36393f" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="peterhanania - Discord Webhook Sender" />
+    <meta
+      property="og:description"
+      content="A simple discord webhook sender for discord!"
+    />
+    <meta
+      name="description"
+      content="A simple discord webhook sender for discord!"
+    />
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Discord Webhook Sender</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script
+      src="script.js"
+      type="text/javascript"
+      type="text/javascript"
+    ></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bounce.js/0.8.2/bounce.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css"
+      type="text/css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+  </head>
+  <body>
+    <div class="title">
+      Discord Webhook Sender
+      <div class="description">a simple webhook sender for discord</div>
+    </div>
+
+    <div class="body">
+      <div class="input-div">
+        <p>Webhook Link:</p>
+        <input type="password" class="input" id="link" />
+      </div>
+      <div class="profile-div">
+        <p>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            onclick="toggle()"
+            id="arrow"
+          >
+            <path
+              d="M12 10L8 6L4 10"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          Profile
+        </p>
+        <div id="profile">
+          <p>Name:</p>
+          <input
+            type="text"
+            class="input"
+            id="name"
+            value="peterhanania.github.io/webhook-sender"
+          />
+          <p>Avatar URL:</p>
+          <input type="text" class="input" id="avatar" />
+        </div>
+        <div class="message-div">
+          <p>Message</p>
+          <textarea id="message" maxlength="2000"></textarea>
+        </div>
+        <div class="buttonDiv">
+          <button onclick="send()">Send</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Made by <a href="https://github.com/peterhanania">Peter_#4444</a></p>
+      <span><a href="https://peterhanania.github.io/webhook-sender">Source code</a></span>
+    </div>
+  </body>
+</html>
