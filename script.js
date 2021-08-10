@@ -421,11 +421,11 @@ function send () {
 }
 
 $(document).ready(function () {
-  /* Swal.fire(
+   Swal.fire(
     'Notice',
     'This webhook sender was just made for fun.<br> Do not abuse it / use it for harm.<br>I am not responsible for any of your actions,',
     'info'
-  )*/
+  )
   const btntheme = document.getElementById('theme')
 
   const currentTheme = localStorage.getItem('theme')
