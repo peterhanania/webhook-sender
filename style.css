@@ -4,7 +4,9 @@ body {
   --white: #fff;
   --white2: #0f1e2d;
   --grey: #ccd5e0;
-  --tgl: #fff
+  --tgl: #fff;
+  --inpt: #ffffff;
+
 }
 
 body.light {
@@ -13,7 +15,8 @@ body.light {
   --white: #0f1e2d;
   --white2: #fff;
   --grey: #192e44;
-  --tgl: #fff
+  --tgl: #fff;
+  --inpt: #0f1e2d;
 }
 
 body {
@@ -74,7 +77,7 @@ body {
   min-width: 0px;
   max-width: 100%;
   max-height: 200px;
-  color: var(--white2);
+  color: var(--inpt);
   font-size: 16px;
   unicode-bidi: plaintext;
   background: var(--input);
@@ -112,7 +115,7 @@ body {
 .input {
   height: 36px;
   width: 100%;
-  color: var(--white);
+  color: var(--inpt);
   font-size: 16px;
   unicode-bidi: plaintext;
   padding: 0px 9px;
